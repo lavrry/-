@@ -1,0 +1,805 @@
+/* إعداد الخط والصفحة */
+
+
+.diwani-title {
+  font-family: 'Diwani', cursive;
+  font-size: 23px;
+  color: white;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f9f6f1;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* رأس الصفحة */
+header {
+    background-color: #b18f62; /* بني فاتح */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* المحتوى */
+main {
+    padding: 20px;
+    text-align: center;
+    color: #4d392d;
+}
+
+.welcome, .news, .about, .contact, .mosque {
+    background-color: #fff8e7;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    color: #4d392d;
+}
+
+/* رابط الخريطة */
+.map-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #b18f62;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+.map-link:hover {
+    background-color: #a47b3e;
+}
+
+/* الفوتر */
+footer {
+    background-color: #b18f62; /* بني فاتح */
+    background-color:  b18f62;
+    text-align: center;
+    padding: 10px;
+    margin-top: 200px;
+    color: white;
+}
+
+footer {
+    background-color: #b18f62; /* بني فاتح */
+    background-color: b18f62;
+    text-align: center;
+    padding: 2px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+body {
+    background-image: url('background.jpg'); /* غيّر الاسم إذا لازم */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* هذا يجعل الخلفية ثابتة */
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+/* طبقة تعتيم فوق الصورة */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202020e1; /* التعتيم بنسبة 50% */
+    z-index: -1;
+}
+.register-button {
+    background-color: #d2b48c;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  .register-button {
+    background-color: #d2b48c;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* ظل خفيف */
+    transition: 0.3s ease;
+    display: inline-block;
+  }
+  
+  .register-button:hover {
+    background-color: #b79366;
+    color: #fffacd;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* ظل أقوى قليلاً */
+    transform: scale(1.03); /* تكبير بسيط عند المرور */
+  }
+  
+  .register-button:active {
+    transform: scale(0.98); /* تصغير بسيط عند الضغط */
+  }
+  .register-button {
+    background-color: #d2b48c;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+
+  .register-button {
+    background-color: #b18f62;   /* لون ذهبي */
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    display: inline-block;
+    margin-top: 10px
+  }
+  .register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b18f62; /* مثال على اللون */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px; /* زوّد هذا الرقم لتنزيل الزر أكثر */
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #c0a070;   /* بني غامق عند المرور */
+    color: #fff7e1;              /* ذهبي فاتح للخط */
+    transform: scale(1.04);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  
+  .register-button:active {
+    transform: scale(0.96);
+  }
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.site-logo {
+    height: 80px;
+    width: auto;
+}
+.ayah-box {
+  font-family: 'Scheherazade New', serif;
+  background-color: rgba(255, 255, 255, 0.318);
+  border: 2px solid #d4af37; /* ذهبي */
+  padding: 15px 20px;
+  margin-top: 100px;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  .ayah-box {
+    margin-bottom: 1px; /* تحكم بالمسافة حسب رغبتك */
+  }
+}
+style>
+  .stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .stat-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    color: white;
+    width: 200px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-box h3 {
+    font-size: 20px;
+    margin-bottom:10px;
+    color: #d4af37;
+  }
+
+  .stat-box p {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .stats-section {
+    display: flex;
+    justify-content: center; /* للتمركز في الوسط */
+    align-items: center;
+    gap: 30px; /* مسافة بين الخانات */
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+    flex-wrap: wrap; /* يخليها تستجيب للشاشات الصغيرة */
+  }
+  
+  .stat-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    color: white;
+    width: 200px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #f0f0f0;
+}
+.stats {
+  margin-top: 20px; /* يمكنك تقليل الرقم لرفع المربعات */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 10px;
+}
+
+.header, .footer {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.card {
+  background: #333;
+  color: #ffd700;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button {
+  margin: 10px auto;
+  display: block;
+  padding: 8px 16px;
+  background-color: #ffaa00;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.ayah {
+  text-align: center;
+  margin-top: 1px;
+  font-size: 14px;
+}
+header {
+  position: relative;
+  padding: 10px;
+}
+
+.main-logo {
+  width: 70px; /* عدّل الحجم حسب الحاجة */
+  height: auto;
+  position: absolute;
+  top: 5px;
+  left: 1230px;
+}
+
+ nav {
+  margin: 0;
+  font-family: 'Tahoma', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* زر الثلاث خطوط */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn span {
+  height: 3px;
+  background: rgb(255, 255, 255);
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+  width: 100%;
+}
+
+/* خلفية سوداء شفافة للقائمة */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.623);
+  z-index: 1000;
+  display: none;
+}
+
+/* القائمة الجانبية */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -1000px;
+  width: 250px;
+  height: 100%;
+  background-color: #b18f62;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1002;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 25px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+}
+
+
+body {
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px; /* غيّر الحجم حسب ما تريد */
+  font-weight: 400; /* 300 = خفيف، 400 = عادي، 600 = عريض */
+  color: #ffffff; /* لون النص العام */
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  direction: rtl;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.register-form button {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #1976D2;
+}
+
+
+
+
+
+
+.halaqat-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.halaqat-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #b18f62;
+}
+
+.halaqat-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.halaqa-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid #b18f62;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.729);
+  transition: transform 0.3s ease;
+}
+
+.halaqa-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.halaqa-card h3 {
+  color: #b18f62;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.halaqa-card p {
+  font-size: 16px;
+}
+
+
+/* تخصيص الخطوط والأيقونات للجوال فقط */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* تصغير الخط للجوال */
+  }
+
+  .logo {
+    font-size: 18px; /* تصغير شعار النص */
+  }
+
+  .menu-btn {
+    width: 25px;
+    height: 20px;
+  }
+
+  .menu-btn span {
+    height: 2px;
+  }
+
+  .halaqa-card {
+    width: 90%; /* تجعل الكروت تأخذ العرض الكامل تقريبا */
+  }
+
+  header {
+    padding: 0 15px;
+    height: 50px;
+  }
+
+  .main-logo {
+    width: 50px; /* تصغير الشعار */
+    left: auto;
+    right: 10px;
+    top: 10px;
+  }
+
+  .sidebar a {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .register-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .halaqat-section h2 {
+    font-size: 22px;
+  }
+
+  .halaqa-card h3 {
+    font-size: 18px;
+  }
+
+  .halaqa-card p {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* تصغير حجم الخلفية لتتناسب مع الشاشة */
+    background-position: top center; /* إعادة تموضع الخلفية */
+    background-attachment: scroll; /* إلغاء الثبات لتقليل التأثير */
+  }
+
+  body::before {
+     background-color: #202020e1; /* التعتيم بنسبة 50% */
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  z-index: 1003;
+}
+
+
+header {
+  flex-direction: row-reverse;
+}  
+
+.header-title {
+  font-size: 20px; /* تم تصغيره من 26 إلى 20 */
+  font-weight: 700;
+  color: #6e4c2f;
+  margin-left: 12px;
+}
+
+.registration-section {
+  padding: 20px 15px;
+  background-color: #f8f5f2;
+  max-width: 420px;  /* << قللنا العرض الثابت */
+  width: 90%;        /* << عشان يتجاوب مع الجوال */
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  font-family: 'Cairo', sans-serif;
+}
+.form-title {
+  color: #6e4c2f;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.registration-form label {
+  display: block;
+  margin: 12px 0 4px;
+  color: #444;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+  border-color: #6e4c2f;
+  outline: none;
+}
+
+.registration-form button {
+  background-color: #6e4c2f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form button:hover {
+  background-color: #5b3f27;
+}
+
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  animation: fadein 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .header-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main-logo {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .menu-btn {
+    right: 15px;
+    top: 15px;
+    transform: scale(0.9);
+  }
+
+  .sidebar {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .stat-box {
+    margin-bottom: 20px;
+  }
+
+  .register-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .ayah-box {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* تنسيقات خاصة بالجوال */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-container h2 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .main-logo {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .sidebar {
+    width: 75%;
+    font-size: 16px;
+  }
+
+  .stat-box {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .register-button {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+  }
+
+  .ayah-box {
+    font-size: 18px !important;
+    padding: 15px;
+  }
+
+  .menu-btn {
+    right: 15px;
+    top: 15px;
+    transform: scale(0.85);
+  }
+}

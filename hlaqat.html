@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>عن الحلقات</title>
+  <link rel="stylesheet" href="style.css"> <!-- اربطه بملف CSS الخاص بك -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- زر الهامبرغر -->
+     <nav>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- القائمة الجانبية -->
+  <div class="sidebar" id="sidebar">
+  <span class="close-btn" onclick="closeSidebar()">×</span> <!-- زر الإغلاق -->
+  <a href="index.html">الرئيسية</a>
+  <a href="hlaqat.html">عن الحلقات</a>
+  <a href="mosque.html">مواقع الجوامع</a>
+  <a href="register.html">سجل معنا</a>
+  <a href="contact.html">تواصل معنا</a>
+</div>
+</nav>
+  <!-- خلفية مظللة -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <script src="script.js"></script>
+
+
+  <header>
+    <div class="header-container">
+      <div class="logo">مجمع الفريان</div>
+      <div class="menu-btn" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+   <img src="logo.png" alt="شعار الموقع" class="main-logo">
+
+  <main>
+    <section class="halaqat-section">
+      <h2>الحلقات التعليمية</h2>
+
+      <div class="halaqat-container">
+        <div class="halaqa-card">
+          <h3>حلقات العرفج</h3>
+          <p>وصف موجز عن الحلقة.</p>
+        </div>
+        <div class="halaqa-card">
+          <h3>حلقات الصفيان</h3>
+          <p>وصف موجز عن الحلقة.</p>
+        </div>
+        <div class="halaqa-card">
+          <h3>حلقات ابن قدامة</h3>
+          <p>وصف موجز عن الحلقة.</p>
+        </div>
+        <div class="halaqa-card">
+          <h3>حلقات هيلة</h3>
+          <p>وصف موجز عن الحلقة.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+        <p>جميع الحقوق محفوظة &copy;  2025 مُجَمْع اْلفَرَيان</p>
+    </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.sidebar').classList.toggle('active');
+      document.querySelector('.overlay').classList.toggle('active');
+    }
+  </script>
+
+   <script>
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  }
+</script>
+
+
+</body>
+</html>

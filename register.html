@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجمع الفريان</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+     
+</head>
+
+<body>
+   <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>  
+     
+  <!-- خلفية مظللة -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+      </div>
+    
+      </div>
+
+    <header>
+      <img src="logo.png" alt="شعار الموقع" class="main-logo">
+        <div class="header-container">
+            <h2>مجمع الفريان</h2>
+              
+            
+        </div>
+    </header>
+    <nav>
+
+  <div class="sidebar" id="sidebar">
+  <span class="close-btn" onclick="closeSidebar()">×</span> <!-- زر الإغلاق -->
+  <a href="index.html">الرئيسية</a>
+  <a href="hlaqat.html">عن الحلقات</a>
+  <a href="mosque.html">مواقع الجوامع</a>
+  <a href="register.html">سجل معنا</a>
+  <a href="contact.html">تواصل معنا</a>
+</div>
+</nav>
+
+<section class="registration-section">
+     <div class="success-message" id="successMessage">
+    تم تسجيلك بنجاح، سيتم التواصل معك قريبًا.
+  </div>
+  <h2 class="form-title">سجّل في الحلقات</h2>
+  <form class="registration-form" onsubmit="return handleSubmit(event)">
+    <label for="fullname">الاسم الكامل:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="age">العمر:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="nationality">الجنسية:</label>
+    <input type="text" id="nationality" name="nationality" required>
+
+    <label for="idNumber">رقم الهوية أو الجواز:</label>
+    <input type="text" id="idNumber" name="idNumber" required>
+
+    <label for="memorization">مقدار الحفظ السابق:</label>
+    <input type="text" id="memorization" name="memorization" required>
+
+    <label for="halaqah">اختر الحلقة التي ترغب بها:</label>
+    <select id="halaqah" name="halaqah" required>
+      <option value="">-- اختر الحلقة --</option>
+      <option value="arafaj">حلقات جامع العرفج</option>
+      <option value="ibnQudamah">حلقات جامع ابن قدامة</option>
+      <option value="sufyan">حلقات جامع الصفيان</option>
+      <option value="hayla">حلقات جامع هيلا</option>
+    </select>
+
+    <button type="submit">إرسال</button>
+  </form>
+
+ 
+</section>
+
+
+ <script>
+  function toggleMenu() {
+  document.getElementById('sidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+ </script>
+
+ <script>
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  }
+</script>
+
+<script>
+  function handleSubmit(event) {
+    event.preventDefault(); // يمنع إعادة تحميل الصفحة
+
+    // التحقق من صحة الحقول (جميعها مطلوبة، ولكن نضيف تحقق إضافي للـ select)
+    const halaqah = document.getElementById("halaqah").value;
+    if (halaqah === "") {
+      alert("يرجى اختيار الحلقة التي ترغب بها.");
+      return false;
+    }
+
+    // عرض رسالة النجاح
+    const message = document.getElementById("successMessage");
+    message.style.display = "block";
+
+    // إعادة تعيين النموذج
+    event.target.reset();
+
+    // إخفاء الرسالة بعد 5 ثوانٍ
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 5000);
+
+    return false;
+  }
+</script>
+
+ </body>
+</html>
