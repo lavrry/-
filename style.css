@@ -699,7 +699,9 @@ header {
 /* تنسيقات خاصة انديكس بالجوال */
 @media (max-width: 768px) {
   body {
-    padding: 0 10px;
+    transform: scale(0.5);
+    transform-origin: top center; /* يبدأ التصغير من الأعلى */
+    width: 200%; /* يعوّض تصغير الحجم حتى يظل العرض ممتد */
   }
 
   header {
