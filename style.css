@@ -717,6 +717,20 @@ header {
     padding: 0 10px;
   }
 
+   .stat-box {
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .register-button {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+  }
+
   nav {
     gap: 10px;
   }
