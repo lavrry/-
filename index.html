@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مجمع الفريان</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- خلفية مظللة -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <nav>
+    <div class="sidebar" id="sidebar">
+      <span class="close-btn" onclick="closeSidebar()">×</span>
+      <a href="index.html">الرئيسية</a>
+      <a href="hlaqat.html">عن الحلقات</a>
+      <a href="mosque.html">مواقع الجوامع</a>
+      <a href="register.html">سجل معنا</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+  </nav>
+
+  <header>
+    <img src="logo.png" alt="شعار الموقع" class="main-logo">
+    <div class="header-container">
+      <h2>مجمع الفريان</h2>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h1>مرحباً بكم في مجمع الفريان</h1>
+      <p>حلقات لتحفيظ القرآن الكريم وتعليم علومه</p>
+    </section>
+
+    <section class="stats-section" style="text-align: center; margin-top: 40px;">
+      <div class="stat-box">
+        <h3 id="visits-count">0</h3>
+        <p>عدد المعلمين</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="students-count">0</h3>
+        <p>عدد الطلاب</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="halaqat-count">0</h3>
+        <p>عدد الحلقات الحالية</p>
+      </div>
+      <a href="register.html" class="register-button">سجّل معنا</a>
+    </section>
+
+    <div id="quran-ayah" class="ayah-box" style="margin-top: 50px; text-align: center; font-size: 23px; color: white;">
+      الآية ستظهر هنا
+    </div>
+  </main>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2025 مُجَمْع اْلفَرَيان</p>
+  </footer>
+
+  <div style="height: 60px;"></div>
+
+  <script>
+    // عداد الزيارات
+    let visits = localStorage.getItem('visits') || 0;
+    visits++;
+    localStorage.setItem('visits', visits);
+
+    function animateCounter(id, target) {
+      let count = 0;
+      const speed = 20;
+      const step = Math.ceil(target / 50);
+
+      const counter = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(counter);
+        }
+        document.getElementById(id).innerText = count;
+      }, speed);
+    }
+
+    window.onload = function () {
+      animateCounter("visits-count", 82);
+      animateCounter("students-count", 120);
+      animateCounter("halaqat-count", 8);
+    };
+
+    const ayat = [
+      "وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا ",
+      "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ",
+      "وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+      "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ مُبَارَكٌ",
+      "وَاذْكُرْ رَبَّكَ فِي نَفْسِكَ "
+    ];
+
+    let ayahIndex = 0;
+
+    function showNextAyah() {
+      document.getElementById("quran-ayah").innerText = ayat[ayahIndex];
+      ayahIndex = (ayahIndex + 1) % ayat.length;
+    }
+
+    showNextAyah();
+    setInterval(showNextAyah, 3000);
+
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+      document.getElementById('overlay').classList.toggle('active');
+    }
+
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.overlay').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

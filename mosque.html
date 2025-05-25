@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الجامع - حلقات العرفج</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div> 
+
+<nav>
+
+  <!-- القائمة الجانبية -->
+ <div class="sidebar" id="sidebar">
+  <span class="close-btn" onclick="closeSidebar()">×</span> <!-- زر الإغلاق -->
+  <a href="index.html">الرئيسية</a>
+  <a href="hlaqat.html">عن الحلقات</a>
+  <a href="mosque.html">مواقع الجوامع</a>
+  <a href="register.html">سجل معنا</a>
+  <a href="contact.html">تواصل معنا</a>
+</div>
+</nav>
+
+    <header>
+      <img src="logo.png" alt="شعار الموقع" class="main-logo">
+        <div class="header-container">
+            <h2>مجمع الفريان</h2>  
+    </header>
+
+    <main>
+        <section class="mosque">
+            <h1>موقع الجامع</h1>
+            <p>يمكنك زيارة الجامع من خلال الخريطة أدناه:</p>
+            <a href="https://maps.app.goo.gl/uZVkRKUf9SCeeuyz6?g_st=com.google.maps.preview.copy" target="_blank" class="map-link">اضغط هنا لزيارة موقع الجامع</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; مُجَمْع اْلفَرَيان 2025</p>
+    </footer>
+ <script>
+  function toggleMenu() {
+  document.getElementById('sidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+ </script>
+
+  <script>
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  }
+</script>
+
+
+
+</body>
+</html>
